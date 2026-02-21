@@ -26,7 +26,7 @@ jobs:
       - name: Run Tests (User Service)
         run: |
           cd user-service
-          npm test
+          npx jest
 
       - name: Login to Docker Hub
         uses: docker/login-action@v3
