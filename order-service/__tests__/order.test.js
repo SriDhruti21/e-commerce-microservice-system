@@ -7,6 +7,8 @@ jest.mock("axios");
 describe("Order Service Test Cases", () => {
 
     beforeEach(() => {
+        jest.clearAllMocks();
+
         axios.get.mockResolvedValue({
             data: [{ id: 1, name: "Alice" }]
         });
