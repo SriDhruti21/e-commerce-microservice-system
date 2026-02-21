@@ -43,4 +43,3 @@ jobs:
         run: |
           docker build -t ${{ secrets.DOCKER_USERNAME }}/order-service ./order-service
           docker push ${{ secrets.DOCKER_USERNAME }}/order-service
-  

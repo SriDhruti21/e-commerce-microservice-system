@@ -16,6 +16,12 @@ app.get('/', (req, res) => {
   res.send("User Service is Running 🚀");
 });
 
-app.listen(PORT, () => {
-  console.log(`User Service running on port ${PORT}`);
-});
+// 👇 Only start server if not in test mode
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`User Service running on port ${PORT}`);
+  });
+}
+
+// 👇 Export for testing
+module.exports = app;
